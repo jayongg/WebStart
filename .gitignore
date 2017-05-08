@@ -199,3 +199,6 @@ bower_components/
 
 # generated distribution files
 dist/
+
+#Visual Studio Code
+.vscode/
