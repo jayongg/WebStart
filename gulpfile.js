@@ -37,8 +37,10 @@ gulp.task('jsx', function() {
     .pipe(gulp.dest('dist'));
 });
 
+var filesToCopy = ['src/**/*.js','src/**/*.htm*'];
+
 gulp.task('copyfiles', function (){
-  return gulp.src(['src/**/*.js','src/**/*.htm*'])
+  return gulp.src(filesToCopy)
     .pipe(gulp.dest('dist'));
 });
 
@@ -54,7 +56,7 @@ gulp.task('default', ['help']);
 function runTasks(staticServerTask){
   gulp.watch(['src/**/*.jsx'], ['jsx']);
   gulp.watch(['src/**/*.ts'], ['ts']);
-  gulp.watch(['src/**/*'], ['copyfiles']);
+  gulp.watch(filesToCopy, ['copyfiles']);
 
   runSequence('copyfiles',
               'jsx',
