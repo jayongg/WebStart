@@ -22,7 +22,8 @@ gulp.task('ts', function () {
   return gulp.src('src/**/*.ts')
     .pipe(ts({
       noImplicitAny: true,
-      out: 'maints.js'
+      target: "es5",
+      outDir: 'maints.js'
     }))
     .pipe(gulp.dest('dist'));
 });
@@ -36,8 +37,8 @@ gulp.task('jsx', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('js', function (){
-  return gulp.src('src/**/*.js')
+gulp.task('copyfiles', function (){
+  return gulp.src(['src/**/*.js','src/**/*.htm*'])
     .pipe(gulp.dest('dist'));
 });
 
@@ -50,20 +51,26 @@ gulp.task('default', ['help']);
 
 /** +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ **/
 
+function runTasks(staticServerTask){
+  gulp.watch(['src/**/*.jsx'], ['jsx']);
+  gulp.watch(['src/**/*.ts'], ['ts']);
+  gulp.watch(['src/**/*'], ['copyfiles']);
+
+  runSequence('copyfiles',
+              'jsx',
+              'ts',
+              staticServerTask);
+}
+
 /**
  * Startup  webserver.
  */
 gulp.task('serve-web', function () {
+  runTasks('serve-static');
+});
 
-  gulp.watch(['src/**/*.jsx'], ['jsx']);
-  gulp.watch(['src/**/*.ts'], ['ts']);
-  gulp.watch(['src/**/*.js'], ['js']);
-
-  runSequence('js',
-              'jsx',
-              'ts',
-              'serve-static');
-      
+gulp.task('serve-web-insecure', function () {
+  runTasks('serve-static-insecure');
 });
 
 gulp.task('serve-static', function () {
