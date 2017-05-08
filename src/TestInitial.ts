@@ -9,7 +9,7 @@ export module Localization {
 		Semilight
 	}
 
-	export function getLanguageFileWithFallback(lang: string): string {
+	export function getLanguageFileWithFallback(lang: string): void {
 		if (!lang) {
 			throw new Error("stringId must be a non-empty string, but was: " + lang);
 		}
