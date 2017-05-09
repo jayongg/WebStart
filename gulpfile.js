@@ -22,7 +22,7 @@ gulp.task('ts', function () {
   return gulp.src('src/**/*.ts')
     .pipe(ts({
       noImplicitAny: true,
-      target: "es5",
+      target: "es2015",
       outDir: 'maints.js'
     }))
     .pipe(gulp.dest('dist'));
