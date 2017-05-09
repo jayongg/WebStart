@@ -250,7 +250,7 @@ gulp.task('dist-minify', ['dist-minify-js', 'dist-minify-css'], function() {
  */
 gulp.task('dist-minify-js', function() {
   gulp.src([
-    './app*/**/*.js',
+    './src/**/*.js',
     './scripts/**/*', '!./scripts/MicrosoftAjax.js'
   ], { base: './' })
     .pipe($.uglify())
