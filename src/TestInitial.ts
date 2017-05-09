@@ -1,18 +1,11 @@
-// Should we be referencing node.d.ts?
-// declare function require(name: string):any;f
 export module Localization {
-	export enum FontFamily {
-		Regular,
-		Bold,
-		Light,
-		Semibold,
-		Semilight
-	}
+
+    const defaultLang = "en-us";
 
 	export function getLanguageFileWithFallback(lang: string): void {
-		if (!lang) {
-			throw new Error("stringId must be a non-empty string, but was: " + lang);
-		}
+        if (!lang) {
+            lang = defaultLang;
+        }
 
         var head = document.getElementsByTagName('head')[0];
         var script = document.createElement('script');
@@ -21,9 +14,9 @@ export module Localization {
             console.log("yeah!");
         };
         script.onerror = function () {
-            if (lang != "en-us") {
+            if (lang != defaultLang) {
                 // try English
-                getLanguageFileWithFallback("en-us");
+                getLanguageFileWithFallback(defaultLang);
             }
         }
         script.src = lang + "/onenote_strings.js";
