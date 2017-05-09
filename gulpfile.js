@@ -23,7 +23,6 @@ gulp.task('ts', function () {
     .pipe(ts({
       noImplicitAny: true,
       target: "es2015",
-      outDir: 'maints.js'
     }))
     .pipe(gulp.dest('dist'));
 });
@@ -37,7 +36,7 @@ gulp.task('jsx', function() {
     .pipe(gulp.dest('dist'));
 });
 
-var filesToCopy = ['src/**/*.js','src/**/*.htm*'];
+var filesToCopy = ['src/**/*.js','src/**/*.htm*','src/**/*.css'];
 
 gulp.task('copyfiles', function (){
   return gulp.src(filesToCopy)
