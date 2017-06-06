@@ -1,7 +1,29 @@
+
+function doit() {
+    let AnyOffice:any = (<any>window)["Office"];
+    
+    AnyOffice.context.document.setSelectedDataAsync("<b>HI <i>KIT", { coercionType: "html"});
+}
+
+function gimmeTitle() {
+    let AnyOneNote:any = (<any>window)["OneNote"];
+    AnyOneNote.run(function (ctx:any) {
+	var app = ctx.application;
+	var page = app.getActivePage();
+	page.load("title");
+	ctx.sync().then(function () {
+
+		console.log(page.title);
+        var elem = document.getElementById("titlename");
+        elem.innerText = page.title;
+	});
+
+});
+}
+
 namespace Localization {
 
     const defaultLang = "en-us";
-
 	export function setLanguageStringsAsync(lang: string): Promise<any> {
         if (!lang) {
             lang = defaultLang;

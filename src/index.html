@@ -4,8 +4,19 @@
         var exports = {};
     </script>
     <script src="Localization.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.debug.js" type="text/javascript"></script>
+
+    <script>
+        Office.initialize = function () {
+            // we need something here
+        }
+
+    </script>
 </head>
 <body>
-    here
+    <button onclick="doit()">DO IT</button>
+    <button onclick="gimmeTitle()">Gimme</button>
+
+    <div id="titlename"></div>
 </body>
 </html>

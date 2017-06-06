@@ -9,7 +9,7 @@ Quick web service:
 	This will also compile and jsx (none being used now) and .ts files into .js, and copy to Stickers/dist/ folder.
 
 	For insecure service, also run:
-	gulp server-static-insecure
+	gulp serve-web-insecure
 	(served on port 8444)
 	This will serve the contents of serve-web onto 8444.
 
