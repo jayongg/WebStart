@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+List of actions for the built in Agave commands. We are reuse the Agave manifest schema but the resources are all dummies. They will not be used. Since the UI is rendered in the native code only the actions
+matters here: Action are listed inside a button:
+
+                 <Control xsi:type="Button" id="distributeSectionId">
+                  <Label resid="residShort" />
+                  <Supertip>
+                    <Title resid="residShort" />
+                    <Description resid="residLong" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="image16" />
+                    <bt:Image size="32" resid="image16" />
+                    <bt:Image size="80" resid="image16" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="distributeSectionUrl" />
+                  </Action>
+                </Control>
+                
+The id of the action are used to trigger the action.
+-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+	<Id>D06A03D3-B66F-4FFB-BB6B-F1ACDC03FA1B</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="My Agave">
+	</DisplayName>
+	<Description DefaultValue="My Agave"/>
+	<IconUrl DefaultValue="~remoteAppUrl/Images/OData_Icon_32.png" />
+	<DefaultSettings>
+		<SourceLocation DefaultValue="https://localhost:8446/dist/index.html" />
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+
+<!--
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+		<Description resid="residLong" />
+		<Hosts>
+			<Host xsi:type="Notebook">
+				<DesktopFormFactor>
+					<ExtensionPoint xsi:type="PrimaryCommandSurface">
+						<CustomTab id="External Data3">
+							<Group id="ResearcherGroup">
+								<Label resid="residShort" />
+								<Icon>
+									<bt:Image size="16" resid="image16" />
+									<bt:Image size="32" resid="image16" />
+									<bt:Image size="80" resid="image16" />
+								</Icon>
+								<Control xsi:type="Button" id="Researcher">
+									<Label resid="residShort" />
+									<Supertip>
+										<Title resid="residShort" />
+										<Description resid="residLong" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="image16" />
+										<bt:Image size="32" resid="image16" />
+										<bt:Image size="80" resid="image16" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="researcherUrl" />
+										<Title resid="residResearcher" />
+									</Action>
+								</Control>
+								<Control xsi:type="Button" id="LocalResearcher">
+									<Label resid="residShort" />
+									<Supertip>
+										<Title resid="residShort" />
+										<Description resid="residLong" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="image16" />
+										<bt:Image size="32" resid="image16" />
+										<bt:Image size="80" resid="image16" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="localResearcherUrl" />
+										<Title resid="residResearcher" />
+									</Action>
+								</Control>
+							</Group>
+							<Label resid="residShort" />
+						</CustomTab>
+					</ExtensionPoint>
+				</DesktopFormFactor>
+			</Host>
+		</Hosts>
+		<Resources>
+			<bt:Images>
+				<bt:Image id="image16" DefaultValue="~remoteAppUrl/Images/OData_Icon_16.png"/>
+			</bt:Images>
+			<bt:Urls>
+				<bt:Url id="researcherUrl" DefaultValue="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?clientlogging=false" >
+					<bt:Override Locale="ar-sa" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ar-sa&amp;clientlogging=false"/>
+					<bt:Override Locale="bg-bg" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=bg-bg&amp;clientlogging=false"/>
+					<bt:Override Locale="ca-es" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ca-es&amp;clientlogging=false"/>
+					<bt:Override Locale="cs-cz" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=cs-cz&amp;clientlogging=false"/>
+					<bt:Override Locale="da-dk" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=da-dk&amp;clientlogging=false"/>
+					<bt:Override Locale="de-de" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=de-de&amp;clientlogging=false"/>
+					<bt:Override Locale="el-gr" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=el-gr&amp;clientlogging=false"/>
+					<bt:Override Locale="es-es" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=es-es&amp;clientlogging=false"/>
+					<bt:Override Locale="et-ee" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=et-ee&amp;clientlogging=false"/>
+					<bt:Override Locale="es-es" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=es-es&amp;clientlogging=false"/>
+					<bt:Override Locale="fi-fi" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=fi-fi&amp;clientlogging=false"/>
+					<bt:Override Locale="fr-fr" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=fr-fr&amp;clientlogging=false"/>
+					<bt:Override Locale="gl-es" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=gl-es&amp;clientlogging=false"/>
+					<bt:Override Locale="he-il" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=he-il&amp;clientlogging=false"/>
+					<bt:Override Locale="hi-in" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=hi-in&amp;clientlogging=false"/>
+					<bt:Override Locale="hr-hr" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=hr-hr&amp;clientlogging=false"/>
+					<bt:Override Locale="hu-hu" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=hu-hu&amp;clientlogging=false"/>
+					<bt:Override Locale="id-id" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=id-id&amp;clientlogging=false"/>
+					<bt:Override Locale="it-it" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=it-it&amp;clientlogging=false"/>
+					<bt:Override Locale="ja-jp" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ja-jp&amp;clientlogging=false"/>
+					<bt:Override Locale="kk-kz" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=kk-kz&amp;clientlogging=false"/>
+					<bt:Override Locale="ko-kr" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ko-kr&amp;clientlogging=false"/>
+					<bt:Override Locale="lt-lt" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=lt-lt&amp;clientlogging=false"/>
+					<bt:Override Locale="lv-lv" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=lv-lv&amp;clientlogging=false"/>
+					<bt:Override Locale="ms-my" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ms-my&amp;clientlogging=false"/>
+					<bt:Override Locale="nb-no" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=nb-no&amp;clientlogging=false"/>
+					<bt:Override Locale="nl-nl" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=nl-nl&amp;clientlogging=false"/>
+					<bt:Override Locale="pl-pl" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=pl-pl&amp;clientlogging=false"/>
+					<bt:Override Locale="pt-br" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=pt-br&amp;clientlogging=false"/>
+					<bt:Override Locale="pt-pt" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=pt-pt&amp;clientlogging=false"/>
+					<bt:Override Locale="ro-ro" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ro-ro&amp;clientlogging=false"/>
+					<bt:Override Locale="ru-ru" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=ru-ru&amp;clientlogging=false"/>
+					<bt:Override Locale="sk-sk" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=sk-sk&amp;clientlogging=false"/>
+					<bt:Override Locale="sl-si" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=sl-si&amp;clientlogging=false"/>
+					<bt:Override Locale="sr-cyrl-rs" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=sr-cyrl-rs&amp;clientlogging=false"/>
+					<bt:Override Locale="sr-latn-rs" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=sr-latn-rs&amp;clientlogging=false"/>
+					<bt:Override Locale="sv-se" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=sv-se&amp;clientlogging=false"/>
+					<bt:Override Locale="th-th" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=th-th&amp;clientlogging=false"/>
+					<bt:Override Locale="tr-tr" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=tr-tr&amp;clientlogging=false"/>
+					<bt:Override Locale="uk-ua" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=uk-ua&amp;clientlogging=false"/>
+					<bt:Override Locale="vi-vn" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=vi-vn&amp;clientlogging=false"/>
+					<bt:Override Locale="zh-cn" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=zh-cn&amp;clientlogging=false"/>
+					<bt:Override Locale="zh-tw" Value="https://entity.osi.office.net/officeentity/web/views/juno.agave.cshtml?culture=zh-tw&amp;clientlogging=false"/>
+				</bt:Url>
+				<bt:Url id="localResearcherUrl" DefaultValue="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;clientlogging=false" >
+					<bt:Override Locale="ar-sa" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ar-sa&amp;clientlogging=false"/>
+					<bt:Override Locale="bg-bg" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=bg-bg&amp;clientlogging=false"/>
+					<bt:Override Locale="ca-es" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ca-es&amp;clientlogging=false"/>
+					<bt:Override Locale="cs-cz" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=cs-cz&amp;clientlogging=false"/>
+					<bt:Override Locale="da-dk" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=da-dk&amp;clientlogging=false"/>
+					<bt:Override Locale="de-de" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=de-de&amp;clientlogging=false"/>
+					<bt:Override Locale="el-gr" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=el-gr&amp;clientlogging=false"/>
+					<bt:Override Locale="es-es" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=es-es&amp;clientlogging=false"/>
+					<bt:Override Locale="et-ee" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=et-ee&amp;clientlogging=false"/>
+					<bt:Override Locale="es-es" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=es-es&amp;clientlogging=false"/>
+					<bt:Override Locale="fi-fi" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=fi-fi&amp;clientlogging=false"/>
+					<bt:Override Locale="fr-fr" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=fr-fr&amp;clientlogging=false"/>
+					<bt:Override Locale="gl-es" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=gl-es&amp;clientlogging=false"/>
+					<bt:Override Locale="he-il" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=he-il&amp;clientlogging=false"/>
+					<bt:Override Locale="hi-in" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=hi-in&amp;clientlogging=false"/>
+					<bt:Override Locale="hr-hr" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=hr-hr&amp;clientlogging=false"/>
+					<bt:Override Locale="hu-hu" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=hu-hu&amp;clientlogging=false"/>
+					<bt:Override Locale="id-id" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=id-id&amp;clientlogging=false"/>
+					<bt:Override Locale="it-it" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=it-it&amp;clientlogging=false"/>
+					<bt:Override Locale="ja-jp" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ja-jp&amp;clientlogging=false"/>
+					<bt:Override Locale="kk-kz" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=kk-kz&amp;clientlogging=false"/>
+					<bt:Override Locale="ko-kr" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ko-kr&amp;clientlogging=false"/>
+					<bt:Override Locale="lt-lt" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=lt-lt&amp;clientlogging=false"/>
+					<bt:Override Locale="lv-lv" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=lv-lv&amp;clientlogging=false"/>
+					<bt:Override Locale="ms-my" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ms-my&amp;clientlogging=false"/>
+					<bt:Override Locale="nb-no" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=nb-no&amp;clientlogging=false"/>
+					<bt:Override Locale="nl-nl" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=nl-nl&amp;clientlogging=false"/>
+					<bt:Override Locale="pl-pl" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=pl-pl&amp;clientlogging=false"/>
+					<bt:Override Locale="pt-br" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=pt-br&amp;clientlogging=false"/>
+					<bt:Override Locale="pt-pt" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=pt-pt&amp;clientlogging=false"/>
+					<bt:Override Locale="ro-ro" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ro-ro&amp;clientlogging=false"/>
+					<bt:Override Locale="ru-ru" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=ru-ru&amp;clientlogging=false"/>
+					<bt:Override Locale="sk-sk" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=sk-sk&amp;clientlogging=false"/>
+					<bt:Override Locale="sl-si" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=sl-si&amp;clientlogging=false"/>
+					<bt:Override Locale="sr-cyrl-rs" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=sr-cyrl-rs&amp;clientlogging=false"/>
+					<bt:Override Locale="sr-latn-rs" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=sr-latn-rs&amp;clientlogging=false"/>
+					<bt:Override Locale="sv-se" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=sv-se&amp;clientlogging=false"/>
+					<bt:Override Locale="th-th" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=th-th&amp;clientlogging=false"/>
+					<bt:Override Locale="tr-tr" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=tr-tr&amp;clientlogging=false"/>
+					<bt:Override Locale="uk-ua" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=uk-ua&amp;clientlogging=false"/>
+					<bt:Override Locale="vi-vn" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=vi-vn&amp;clientlogging=false"/>
+					<bt:Override Locale="zh-cn" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=zh-cn&amp;clientlogging=false"/>
+					<bt:Override Locale="zh-tw" Value="ms-appx-web:///jsaddins/locallaunch/locallaunch.html?onenoteagave=RS&amp;culture=zh-tw&amp;clientlogging=false"/>
+				</bt:Url>
+			</bt:Urls>
+			<bt:ShortStrings>
+				<bt:String id="residShort" DefaultValue="residShort" />
+				<bt:String id="residResearcher" DefaultValue="Researcher">
+					<bt:Override Locale="af-za" Value="Navorser" />
+					<bt:Override Locale="am-et" Value="ተመራማሪ" />
+					<bt:Override Locale="ar-sa" Value="الباحث`ب ث" />
+					<bt:Override Locale="az-latn-az" Value="Tədqiqatçı" />
+					<bt:Override Locale="be-by" Value="Даследчык" />
+					<bt:Override Locale="bg-bg" Value="Изследване" />
+					<bt:Override Locale="bn-bd" Value="গবেষক" />
+					<bt:Override Locale="ca-es" Value="Cercador" />
+					<bt:Override Locale="cs-cz" Value="Researcher" />
+					<bt:Override Locale="da-dk" Value="Researcher" />
+					<bt:Override Locale="de-de" Value="Recherche" />
+					<bt:Override Locale="el-gr" Value="Ερευνητής" />
+					<bt:Override Locale="en-gb" Value="Researcher" />
+					<bt:Override Locale="es-es" Value="Investigador" />
+					<bt:Override Locale="es-mx" Value="Investigador" />
+					<bt:Override Locale="et-ee" Value="Uurimispaan" />
+					<bt:Override Locale="eu-es" Value="Ikertzailea" />
+					<bt:Override Locale="fa-ir" Value="محقق" />
+					<bt:Override Locale="fi-fi" Value="Researcher" />
+					<bt:Override Locale="fil-ph" Value="Researcher" />
+					<bt:Override Locale="fr-ca" Value="Recherche" />
+					<bt:Override Locale="fr-fr" Value="Recherche" />
+					<bt:Override Locale="gl-es" Value="Investigador" />
+					<bt:Override Locale="ha-latn-ng" Value="Mai nazari" />
+					<bt:Override Locale="he-il" Value="חוקר`עע" />
+					<bt:Override Locale="hi-in" Value="शोधकर्ता" />
+					<bt:Override Locale="hr-hr" Value="Istraživač" />
+					<bt:Override Locale="hu-hu" Value="Kutató" />
+					<bt:Override Locale="id-id" Value="Peneliti" />
+					<bt:Override Locale="is-is" Value="Heimildaleit" />
+					<bt:Override Locale="it-it" Value="Strumento ricerche" />
+					<bt:Override Locale="ja-jp" Value="リサーチ ツール" />
+					<bt:Override Locale="kk-kz" Value="Зерттеу құралы" />
+					<bt:Override Locale="km-kh" Value="Researcher" />
+					<bt:Override Locale="kn-in" Value="ಸಂಶೋಧಕ" />
+					<bt:Override Locale="ko-kr" Value="리서치 도구" />
+					<bt:Override Locale="lo-la" Value="ຕົວຄົ້ນຄວ້າ" />
+					<bt:Override Locale="lt-lt" Value="Tyrinėtojas" />
+					<bt:Override Locale="lv-lv" Value="Pētnieks" />
+					<bt:Override Locale="mk-mk" Value="Истражувач" />
+					<bt:Override Locale="ml-in" Value="റിസർച്ചർ" />
+					<bt:Override Locale="ms-my" Value="Penyelidik" />
+					<bt:Override Locale="nb-no" Value="Researcher" />
+					<bt:Override Locale="nl-nl" Value="Onderzoek" />
+					<bt:Override Locale="pl-pl" Value="Poszukiwanie" />
+					<bt:Override Locale="pt-br" Value="Pesquisador" />
+					<bt:Override Locale="pt-pt" Value="Investigação" />
+					<bt:Override Locale="ro-ro" Value="Cercetare" />
+					<bt:Override Locale="ru-ru" Value="Помощник исследователя" />
+					<bt:Override Locale="sk-sk" Value="Vyhľadávač" />
+					<bt:Override Locale="sl-si" Value="Raziskovalec" />
+					<bt:Override Locale="sq-al" Value="Hulumtuesi" />
+					<bt:Override Locale="sr-latn-rs" Value="Istraživač" />
+					<bt:Override Locale="sv-se" Value="Researcher" />
+					<bt:Override Locale="sw-ke" Value="Kitafutaji" />
+					<bt:Override Locale="ta-in" Value="ஆராய்வான்" />
+					<bt:Override Locale="te-in" Value="పరిశోధనలు" />
+					<bt:Override Locale="th-th" Value="เครื่องมือค้นคว้า" />
+					<bt:Override Locale="tr-tr" Value="Araştırmacı" />
+					<bt:Override Locale="uk-ua" Value="Дослідник" />
+					<bt:Override Locale="uz-latn-uz" Value="Tadqiqotchi" />
+					<bt:Override Locale="vi-vn" Value="Trình nghiên cứu" />
+					<bt:Override Locale="zh-cn" Value="研究工具" />
+					<bt:Override Locale="zh-tw" Value="研究工具" />
+				</bt:String>
+			</bt:ShortStrings>
+			<bt:LongStrings>
+				<bt:String id="residLong" DefaultValue="residLong" />
+			</bt:LongStrings>
+		</Resources>
+	</VersionOverrides>-->
+</OfficeApp>
